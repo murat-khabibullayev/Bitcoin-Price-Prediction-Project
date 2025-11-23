@@ -1,0 +1,25 @@
+Hangi model,Hangi feature set,Hangi target,Kullanılan parametreler,RMSE,MAE,R2,Direction accuracy
+Lasso,Full features,Target_1d,Lasso Alpha: 76.4222,1707.24,1143.36,0.9903,53.74%
+SVR,Full features,Target_1d,"SVR C=10, gamma='scale'",38512.85,34377.26,-3.9430,49.70%
+Lasso,Feature Selection sonrası,Target_1d,Lasso Alpha: 76.4222,1705.75,1142.04,0.9903,53.59%
+SVR,Feature Selection sonrası,Target_1d,Lasso Alpha: 76.4222,36077.42,31113.86,-3.3376,49.70%
+Lasso,PCA sonrası,Target_1d,PCA 5 comp. Expl.Var: 1.0000,1727.12,1269.06,0.9901,52.40%
+SVR,PCA sonrası,Target_1d,PCA 5 comp. Expl.Var: 1.0000,36077.42,31113.86,-3.3376,49.70%
+Lasso,Full features,Target_7d,Lasso Alpha: 265.9067,5197.43,3788.79,0.9108,45.81%
+SVR,Full features,Target_7d,"SVR C=10, gamma='scale'",39016.28,34899.03,-4.0243,44.46%
+Lasso,Feature Selection sonrası,Target_7d,Lasso Alpha: 265.9067,5139.29,3734.74,0.9128,45.66%
+SVR,Feature Selection sonrası,Target_7d,Lasso Alpha: 265.9067,38277.56,33954.43,-3.8359,44.46%
+Lasso,PCA sonrası,Target_7d,PCA 5 comp. Expl.Var: 0.9975,27685.37,21954.52,-1.5298,45.36%
+SVR,PCA sonrası,Target_7d,PCA 5 comp. Expl.Var: 0.9975,38271.02,33946.06,-3.8342,44.46%
+Lasso,Full features,Target_30d,Lasso Alpha: 782.1036,24458.53,19132.26,-0.6376,37.87%
+SVR,Full features,Target_30d,"SVR C=10, gamma='scale'",41722.47,37067.98,-3.7652,36.08%
+Lasso,Feature Selection sonrası,Target_30d,Lasso Alpha: 782.1036,24330.41,19026.08,-0.6205,38.02%
+SVR,Feature Selection sonrası,Target_30d,Lasso Alpha: 782.1036,41747.57,37017.77,-3.7709,36.08%
+Lasso,PCA sonrası,Target_30d,PCA 5 comp. Expl.Var: 0.9843,151931.37,121570.45,-62.1883,36.08%
+SVR,PCA sonrası,Target_30d,PCA 5 comp. Expl.Var: 0.9843,41728.82,36997.77,-3.7667,36.08%
+Lasso,Full features,Target_365d,Lasso Alpha: 40.9642,51037.29,39341.28,-3.9949,60.48%
+SVR,Full features,Target_365d,"SVR C=10, gamma='scale'",73385.12,69726.59,-9.3268,0.00%
+Lasso,Feature Selection sonrası,Target_365d,Lasso Alpha: 40.9642,51055.14,39354.04,-3.9984,60.48%
+SVR,Feature Selection sonrası,Target_365d,Lasso Alpha: 40.9642,73724.81,70082.15,-9.4226,0.00%
+Lasso,PCA sonrası,Target_365d,PCA 5 comp. Expl.Var: 0.6652,45591.52,37287.37,-2.9858,59.13%
+SVR,PCA sonrası,Target_365d,PCA 5 comp. Expl.Var: 0.6652,73127.32,69445.03,-9.2544,0.00%
