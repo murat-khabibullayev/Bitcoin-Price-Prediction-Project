@@ -2,13 +2,13 @@
 
 Bu proje, FET445 Veri Madenciliği dersi kapsamında, **ABD makroekonomik göstergeleri** ve **finansal piyasa verilerini** kullanarak **Bitcoin (BTC-USD)** fiyatının farklı zaman ufuklarında tahmin edilmesini amaçlamaktadır.
 
-## 1. Proje Bilgileri
+                     Proje Bilgileri
 
 - **Ders:** FET445 – Veri Madenciliği
 - **Dönem:** 2025–2026 Güz Dönemi
 - **Grup Adı:** MacroMinds
 
-**Grup Üyeleri:**
+Grup Üyeleri:
 
 | Öğrenci No     | İsim                        | Görevler (Kısaca)                                   |
 |----------------|-----------------------------|-----------------------------------------------------|
@@ -20,7 +20,7 @@ Bu proje, FET445 Veri Madenciliği dersi kapsamında, **ABD makroekonomik göste
 
 ---
 
-## 2. Problem Tanımı
+Problem Tanımı:
 
 Amaç, **Bitcoin'in gelecekteki fiyatını**, hem kendi geçmiş fiyatları hem de ABD ekonomisine ait makroekonomik göstergeler yardımıyla tahmin etmektir.
 
@@ -34,8 +34,7 @@ Tahmin edilen 4 farklı hedef değişken (target) vardır:
 Bu, bir **zaman serisi regresyon problemi** olarak tasarlanmıştır.
 
 ---
-
-## 3. Kullanılan Veri Setleri
+Kullanılan Veri Setleri:
 
 Veriler iki ana kaynaktan elde edilmiştir:
 
@@ -60,12 +59,10 @@ Veriler iki ana kaynaktan elde edilmiştir:
 
 Tüm seriler **tarih bazlı** olacak şekilde hizalanmış ve **günlük frekansa** dönüştürülmüştür. Eksik değerler için linear interpolation kullanılmıştır.
 
----
 
-## 4. Proje Yapısı
 
-```text
-.
+Proje Yapısı:
+
 ├── README.md                      # Bu dosya
 ├── requirements.txt               # Kullanılan temel Python paketleri
 │
@@ -88,3 +85,77 @@ Tüm seriler **tarih bazlı** olacak şekilde hizalanmış ve **günlük frekans
 │
 └── report/
     └── FET445_MacroMinds_ProjectOutline.pdf
+                        Kullanılan Yöntemler
+            Veri Hazırlama:
+
+Tarih kolonunun standardizasyonu
+
+Farklı frekanstaki serilerin günlük frekansa dönüştürülmesi
+
+Eksik verilerin doldurulması (interpolate)
+
+Gecikmeli özellikler (lag features):
+
+t-1, t-2, t-3, t-7, t-14, t-30 gibi
+
+Feature Selection / Dimensionality Reduction
+
+Her grup üyesi farklı bir yaklaşım denemiştir:
+
+SelectKBest (ANOVA / F-regression)
+
+RFE (Recursive Feature Elimination)
+
+Lasso-based feature selection
+
+Mutual Information tabanlı seçim
+
+PCA (5–20 bileşenli deneyler)
+
+   Modeller:
+
+LinearRegression
+
+RidgeRegression
+
+Lasso
+
+DecisionTreeRegressor
+
+KNeighborsRegressor (KNN)
+
+SVR (Support Vector Regression)
+
+    Değerlendirme Metrikleri:
+
+Regresyon görevleri için:
+
+RMSE (Root Mean Squared Error)
+
+MAE (Mean Absolute Error)
+
+R²
+
+Direction Accuracy:
+Model, fiyatın artıp artmayacağını doğru tahmin ediyor mu?
+
+                    Özet Sonuçlar (Kısa):
+
+Kısa vadede (1 gün, 7 gün):
+
+Linear Regression + SelectKBest (K≈30) oldukça iyi R² değerleri üretmiştir (yaklaşık 0.94–0.99 aralığında).
+
+Orta vadede (30 gün):
+
+Ridge Regression bazı kombinasyonlarda daha istikrarlı sonuçlar vermiştir.
+
+Uzun vadede (365 gün):
+
+Hem klasik modeller hem de PCA tabanlı modellerde performans düşmüş, R² çoğu durumda negatif veya düşük kalmıştır.
+
+PCA, özellikle uzun vadeli hedeflerde bilgi kaybına neden olarak, model performansını genel olarak azaltmıştır.
+
+KNN çoğu senaryoda yüksek hata ve negatif R² ile zayıf performans göstermiştir.
+
+Detaylı metrikler için:
+results/results_final_No_x.csv dosyasına bakılabilir veya her öğrencinin notebook’unda yer alan sonuç tabloları incelenebilir.
