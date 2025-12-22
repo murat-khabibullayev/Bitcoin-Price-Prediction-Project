@@ -1,0 +1,9 @@
+Target,Model,RMSE,MAE,R2,MAPE,Best_Params
+Target_1d,XGBoost,6982.269530742455,5303.0706311985405,0.8375296642478843,10.338070494566908,"{'subsample': 0.8, 'n_estimators': 200, 'max_depth': 3, 'learning_rate': 0.01}"
+Target_1d,SVR,36440.407794522995,31953.358420633103,-3.4253468522140125,67.99350365989326,"{'svr__kernel': 'rbf', 'svr__gamma': 'scale', 'svr__epsilon': 0.1, 'svr__C': 50}"
+Target_7d,XGBoost,11927.139074155988,10561.696993707897,0.530474050638651,23.601315790658013,"{'subsample': 0.8, 'n_estimators': 200, 'max_depth': 6, 'learning_rate': 0.01}"
+Target_7d,SVR,36886.60150875122,32418.43829820528,-3.490806275984472,68.33011883966414,"{'svr__kernel': 'rbf', 'svr__gamma': 'scale', 'svr__epsilon': 0.01, 'svr__C': 50}"
+Target_30d,XGBoost,23172.255290512236,18006.109161559692,-0.46986743255214547,33.171748682226024,"{'subsample': 0.7, 'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.01}"
+Target_30d,SVR,39835.3196172833,34853.118322250615,-3.3438835131629325,69.68747864329993,"{'svr__kernel': 'rbf', 'svr__gamma': 'scale', 'svr__epsilon': 0.01, 'svr__C': 50}"
+Target_365d,XGBoost,53441.54015675099,48283.41390461265,-4.476568624825316,54.23594783713747,"{'subsample': 0.7, 'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.01}"
+Target_365d,SVR,69481.67356156053,65540.72127720177,-8.257445061802235,76.61079943002137,"{'svr__kernel': 'rbf', 'svr__gamma': 'scale', 'svr__epsilon': 0.01, 'svr__C': 50}"

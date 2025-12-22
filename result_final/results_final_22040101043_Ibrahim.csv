@@ -1,0 +1,9 @@
+Target,Model,RMSE,MAE,R2,MAPE_pct,Num_Features,Best_Params
+Target_1d,RandomForest,2425.059842572612,1685.2138870696106,0.9804013670654882,3.6860597835821123,112,"{'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_depth': None}"
+Target_7d,RandomForest,6975.8671217729,5572.4091543745535,0.8393859875381713,11.9449236368073,112,"{'n_estimators': 50, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_depth': 10}"
+Target_30d,RandomForest,17302.59184131869,13346.616560336359,0.18047183310383408,25.695143074934368,112,"{'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_depth': None}"
+Target_365d,RandomForest,45260.4172980284,39199.65670104286,-2.9281468044047254,42.5587734375851,112,"{'n_estimators': 50, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_depth': 10}"
+Target_1d,MLPRegressor,29680.37105747656,22948.49799137537,-1.9357529849714745,42.71847718735819,112,"{'max_iter': 1000, 'hidden_layer_sizes': (64, 32), 'alpha': 0.01}"
+Target_7d,MLPRegressor,40167.55556636484,33936.258218186056,-4.325223491734409,68.55384167232427,112,"{'max_iter': 1000, 'hidden_layer_sizes': (64,), 'alpha': 0.001}"
+Target_30d,MLPRegressor,32745.009118697093,24551.415276917316,-1.9351600647516185,41.90039431284722,112,"{'max_iter': 500, 'hidden_layer_sizes': (128,), 'alpha': 0.1}"
+Target_365d,MLPRegressor,46703.862172757086,37283.91301838632,-3.182694973611424,38.5695093754591,112,"{'max_iter': 500, 'hidden_layer_sizes': (64,), 'alpha': 0.01}"
